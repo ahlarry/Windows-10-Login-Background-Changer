@@ -74,7 +74,7 @@ namespace W10_Logon_BG_Changer
             if (Helpers.IsBackgroundDisabled())
             {
                 WpfMessageBox.Show(LanguageLibrary.Language.Default.background_disabled,
-                    LanguageLibrary.Language.Default.title_dg_disabled, MessageBoxButton.OK, MessageBoxImage.Information);
+                    LanguageLibrary.Language.Default.title_bg_disabled, MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
             Debug.WriteLine("[AccentColor]: " +
@@ -239,11 +239,6 @@ namespace W10_Logon_BG_Changer
             LogonPriEditor.ModifyLogonPri(_tempPriFile, _newPriLocation, imagetemp);
 
             File.Copy(_newPriLocation, Config.PriFileLocation, true);
-
-            WpfMessageBox.Show(
-                LanguageLibrary.Language.Default.success_apply_msg,
-                LanguageLibrary.Language.Default.title_success
-                            );
         }
 
         public void ToggleButton_OnUnchecked(object sender, RoutedEventArgs e)
